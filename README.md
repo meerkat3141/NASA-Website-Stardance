@@ -2,7 +2,10 @@
  
 A space-themed viewer for NASA's **Astronomy Picture of the Day (APOD)**. Fetches the daily image (or video), lets you browse any date back to 1995, jump to a random day, and click images to view them fullscreen. Built with vanilla JavaScript and [Vite](https://vitejs.dev/).
  
-Live site: `https://YOUR-USERNAME.github.io/NASA-Website-Stardance/`
+Try it: `https://meerkat3141.github.io/NASA-Website-Stardance/`
+
+![NASApod website view](/Users/meerkat/Meera Files/Projects/Stardance_Hackclub_nasa_website/NASAPOD.png)
+
  
 ## Features
  
@@ -52,20 +55,6 @@ Live site: `https://YOUR-USERNAME.github.io/NASA-Website-Stardance/`
  
    Open the local URL Vite prints (usually `http://localhost:5173/NASA-Website-Stardance/`).
  
-## Project structure
- 
-```
-NASA-Website-Stardance/
-├─ index.html          # Page shell: title, controls, #app container, lightbox
-├─ public/
-│  ├─ Astronaut.png    # Spinning loading indicator
-│  └─ Starry Sky.png   # Page background
-├─ src/
-│  ├─ main.js          # All the logic: fetch, rendering, navigation, lightbox
-│  └─ style.css        # Styling
-├─ vite.config.js      # Vite config (sets the base path for GitHub Pages)
-└─ .env                # Your API key (not committed)
-```
  
 ## How it works
  
@@ -96,8 +85,6 @@ This project is configured to deploy to GitHub Pages under the `/NASA-Website-St
  
 4. In the repo settings on GitHub, go to **Settings → Pages**, set the source to the **`gh-pages`** branch (root), and save.
 Re-run `npm run deploy` whenever you want to publish updates.
- 
-> **Note on the API key:** Vite bakes `VITE_NASA_API_KEY` into the built JavaScript, so it will be visible in the public site's source. This is acceptable for NASA's free APOD key (it's low-risk and rate-limited), but never publish a sensitive or paid key this way.
  
 
 ## Credits
