@@ -4,7 +4,7 @@ A space-themed viewer for NASA's **Astronomy Picture of the Day (APOD)**. Fetche
  
 Try it: `https://meerkat3141.github.io/NASA-Website-Stardance/`
 
-![NASApod website view](/Users/meerkat/Meera Files/Projects/Stardance_Hackclub_nasa_website/NASAPOD.png)
+![NASApod website view](NASAPOD.png)
 
  
 ## Features
