@@ -25,6 +25,35 @@ body {
   margin: 0 0 1.5rem;
 }
  
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+ 
+.controls button,
+#datepicker {
+  background: #1c0838;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+ 
+.controls button:hover:not(:disabled) {
+  background: #2a0d55;
+}
+ 
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+ 
 #app {
   max-width: 900px;
   margin: 0 auto;
@@ -63,6 +92,15 @@ body {
   aspect-ratio: 16 / 9;
 }
  
+.apod-image {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+ 
+.apod-image:hover {
+  transform: scale(1.02);
+}
+ 
 #app .content p {
   flex: 1 1 50%;
   min-width: 0;
@@ -71,18 +109,6 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: #ffffff;
-}
- 
-#datepicker {
-  position: relative;
-  z-index: 1;
-  background: #1c0838;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 6px;
-  padding: 0.4rem 0.6rem;
-  font-family: 'Courier New', Courier, monospace;
-  margin-bottom: 1.5rem;
 }
  
 #app img.astronaut {
@@ -101,6 +127,30 @@ body {
 @keyframes spin {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+ 
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.92);
+  cursor: zoom-out;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+ 
+.lightbox.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
 }
  
 @media (max-width: 600px) {
