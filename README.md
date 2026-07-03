@@ -99,13 +99,7 @@ Re-run `npm run deploy` whenever you want to publish updates.
  
 > **Note on the API key:** Vite bakes `VITE_NASA_API_KEY` into the built JavaScript, so it will be visible in the public site's source. This is acceptable for NASA's free APOD key (it's low-risk and rate-limited), but never publish a sensitive or paid key this way.
  
-## Customization ideas
- 
-- Swap the background or astronaut PNGs in `public/`
-- Add a "Today" button to jump back to the latest image
-- Show the image date and photographer credit (`data.date`, `data.copyright`)
-- Add a favorites list saved with `localStorage`
-- Add an HD download link using `data.hdurl`
+
 ## Credits
  
 - Images and data courtesy of [NASA's APOD API](https://apod.nasa.gov/apod/)
