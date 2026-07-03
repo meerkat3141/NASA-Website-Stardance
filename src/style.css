@@ -1,84 +1,95 @@
-/* ---------- base ---------- */
 body {
-  margin: 0;                 /* remove the default white gap around the page */
-  min-height: 100vh;         /* at least as tall as the screen */
-  position: relative;        /* so the side strips can position against it */
- 
-  /* Starry Sky background — the image itself is set in main.js so it
-     respects the project's base URL. These control how it's displayed. */
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
   background-color: #100224;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
- 
-  color: #d8cff0;
+  color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
   padding: 3rem 1.5rem;
   box-sizing: border-box;
 }
  
-/* ---------- content ---------- */
+.site-title {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  font-size: 3.2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e9dcff;
+  text-shadow: 0 0 18px rgba(168, 85, 247, 0.85);
+  margin: 0 0 1.5rem;
+}
+ 
 #app {
-  max-width: 700px;          /* stop it stretching too wide on big screens */
-  margin: 0 auto;            /* center the block horizontally */
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
  
-h1 {
+#app h1 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 900;
   font-size: 2.5rem;
-  color: #e9dcff;
+  color: #ffffff;
   line-height: 1.2;
-  text-shadow: 0 0 12px rgba(168, 85, 247, 0.7);  /* soft nebula glow */
+  text-decoration: underline;
 }
  
-/* size the NASA media so it isn't huge */
-#app img,
-#app video,
-#app iframe {
-  width: 100%;
-  max-width: 600px;
+#app .content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+ 
+#app .content img,
+#app .content video,
+#app .content iframe {
+  flex: 1 1 50%;
+  width: 50%;
+  min-width: 0;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
-  border: 1px solid rgba(168, 85, 247, 0.4);
-  box-shadow: 0 0 30px rgba(107, 31, 143, 0.5);
 }
  
-#app iframe {
-  aspect-ratio: 16 / 9;      /* give the youtube iframe real height */
-  height: auto;
+#app .content iframe {
+  aspect-ratio: 16 / 9;
 }
  
-p {
+#app .content p {
+  flex: 1 1 50%;
+  min-width: 0;
+  margin: 0;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
   line-height: 1.7;
-  text-align: left;
-  color: #c6bce0;
+  color: #ffffff;
 }
  
-/* the date picker, tucked top-left and lightly themed */
 #datepicker {
   position: relative;
   z-index: 1;
   background: #1c0838;
-  color: #e9dcff;
-  border: 1px solid rgba(168, 85, 247, 0.5);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
   padding: 0.4rem 0.6rem;
   font-family: 'Courier New', Courier, monospace;
   margin-bottom: 1.5rem;
 }
  
-/* ---------- spinning astronaut (loading state) ---------- */
-/* more specific than "#app img" so the border/shadow/size above don't apply */
 #app img.astronaut {
-  position: fixed;           /* center it against the whole screen */
+  position: fixed;
   top: 50%;
   left: 50%;
-  width: 250px;
+  width: 200px;
   max-width: none;
   border: none;
   border-radius: 0;
@@ -92,17 +103,23 @@ p {
   to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
  
-
- 
-/* ---------- mobile: hide the strips so they don't overlap content ---------- */
 @media (max-width: 600px) {
-  body::before,
-  body::after {
-    display: none;
+  .site-title {
+    font-size: 2.2rem;
   }
  
-  h1 {
+  #app h1 {
     font-size: 1.8rem;
   }
-}
  
+  #app .content {
+    flex-direction: column;
+  }
+ 
+  #app .content img,
+  #app .content video,
+  #app .content iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+}
