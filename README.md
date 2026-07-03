@@ -2,21 +2,20 @@
  
 A space-themed viewer for NASA's **Astronomy Picture of the Day (APOD)**. Fetches the daily image (or video), lets you browse any date back to 1995, jump to a random day, and click images to view them fullscreen. Built with vanilla JavaScript and [Vite](https://vitejs.dev/).
  
-Try it: `https://meerkat3141.github.io/NASA-Website-Stardance/`
+Try it at: `https://meerkat3141.github.io/NASA-Website-Stardance/`
 
 ![NASApod website view](NASAPOD.png)
 
  
 ## Features
  
-- **Daily image or video** pulled live from NASA's APOD API
-- **Date picker** to view the picture from any past date (limited to the valid 1995‑06‑16 → today range)
-- **Prev / Next buttons** to step through the calendar one day at a time
-- **Surprise me** button that loads a random date
-- **Click-to-enlarge lightbox** for images (click anywhere or press `Esc` to close)
-- **Smart media handling** for regular images, direct video files, and embedded YouTube videos
+- **Daily image or video** pulls the picture of the day from NASA's APOD API!
+- **Date picker** A Calendar component where you can choose which date you would like to look at. 
+- **Prev / Next buttons** Easily switch from day-to-day with the "next' and "back" buttons.
+- **Surprise me** Be suprised with a random picture or video of the day!
+- **Click-to-enlarge lightbox** Enlarge images by clicking them and just click away to close!
 - **Spinning astronaut** loading indicator while each request is in flight
-- **Graceful error messages** for invalid dates, rate limits, or network issues
+- **Limited Dates** You will get an error message if you attempt to access a day that has not happened yet. 
 - Responsive layout that stacks on small screens
 ## Tech stack
  
